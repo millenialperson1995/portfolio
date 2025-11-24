@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b1220" />
+  <text x="50" y="100" font-family="Inter, Arial" font-size="36" fill="#9ca3af">Projeto — Plataforma gestão</text>
+  <g transform="translate(60,140)" fill="#9ca3af" font-family="Inter, Arial">
+    <rect x="0" y="0" width="420" height="240" rx="12" fill="#ffffff0b" />
+    <text x="20" y="40" font-size="18">Relatórios</text>
+    <text x="20" y="80" font-size="18">Controle de estoque</text>
+  </g>
+</svg>

@@ -5,6 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rafael Barros | UI/UX Designer & Full Stack Developer</title>
     <meta name="description" content="Portfólio de Rafael Barros - UI/UX Design, Desenvolvimento Full-stack e Automação em Recife.">
+        <!-- Open Graph (Facebook, Slack etc.) -->
+        <meta property="og:title" content="Rafael Barros — Sites, Landing Pages e Automação para clientes" />
+        <meta property="og:description" content="Ajudo empresas e profissionais a vender mais e economizar tempo com sites, landing pages e automações simples. Agende uma conversa de 30 minutos." />
+        <meta property="og:image" content="/assets/img/og-image.svg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourdomain.com/" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Rafael Barros — Sites, Landing Pages e Automação para clientes" />
+        <meta name="twitter:description" content="Ajudo empresas e profissionais a vender mais e economizar tempo com sites, landing pages e automações simples." />
+        <meta name="twitter:image" content="/assets/img/og-image.svg" />
+
+        <!-- Structured data (JSON-LD) -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Rafael Barros",
+            "url": "https://yourdomain.com/",
+            "sameAs": [
+                "https://www.linkedin.com/in/rafael-nascimento-b7550a140/",
+                "https://github.com/millenialperson1995"
+            ],
+            "jobTitle": "UI/UX Designer & Full Stack Developer",
+            "image": "https://yourdomain.com/assets/img/og-image.svg"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://yourdomain.com/",
+            "name": "Rafael Barros — Portfolio",
+            "publisher": {"@type": "Person", "name": "Rafael Barros"}
+        }
+        </script>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -67,18 +104,20 @@
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <span class="text-2xl font-bold text-white tracking-tighter">R<span class="text-primary">B</span>.</span>
-                </div>
+                <!-- Logo + avatar -->
+                        <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                            <span class="text-2xl font-bold text-white tracking-tighter">R<span class="text-primary">B</span>.</span>
+                        </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8">
+                <div class="hidden md:flex items-center h-full space-x-8">
                     <a href="#home" class="text-sm font-medium text-slate-300 hover:text-primary transition-colors">Home</a>
                     <a href="#sobre" class="text-sm font-medium text-slate-300 hover:text-primary transition-colors">Sobre</a>
                     <a href="#servicos" class="text-sm font-medium text-slate-300 hover:text-primary transition-colors">Serviços</a>
                     <a href="#portfolio" class="text-sm font-medium text-slate-300 hover:text-primary transition-colors">Portfólio</a>
-                    <a href="#contato" class="px-5 py-2.5 rounded-full bg-primary/10 text-primary border border-primary/20 text-sm font-medium hover:bg-primary hover:text-white transition-all duration-300">Contato</a>
+                    <a href="#contato" class="px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 text-sm font-medium hover:bg-primary hover:text-white transition-all duration-300">Contato</a>
+                    <!-- Schedule button (Cal) -->
+                    <button data-cal-link="rafael-barros-exv3gg/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view"}' class="hidden lg:inline-flex ml-3 items-center px-4 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-white text-sm font-medium shadow-lg hover:opacity-95 transition-opacity duration-200" aria-label="Agendar conversa">Agendar</button>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -91,13 +130,14 @@
         </div>
 
         <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden md:hidden bg-dark border-b border-slate-800">
+                <div id="mobile-menu" class="hidden md:hidden bg-dark border-b border-slate-800">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-slate-800 hover:text-primary">Home</a>
                 <a href="#sobre" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-primary">Sobre</a>
                 <a href="#servicos" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-primary">Serviços</a>
                 <a href="#portfolio" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-primary">Portfólio</a>
                 <a href="#contato" class="block px-3 py-2 rounded-md text-base font-medium text-primary bg-primary/10 mt-4">Contato</a>
+                <button data-cal-link="rafael-barros-exv3gg/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view"}' class="w-full mt-3 px-3 py-2 rounded-md bg-gradient-to-r from-primary to-secondary text-white text-sm font-medium">Agendar conversa</button>
             </div>
         </div>
     </nav>
@@ -107,15 +147,18 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="inline-flex items-center px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-medium mb-6 reveal">
                 <span class="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></span>
-                Disponível para projetos em Recife & Remoto
+                Atendo clientes diretos — projetos locais e remotos
             </div>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 reveal delay-100">
+            <!-- Avatar (small, centered) -->
+                <!-- (removed avatar; previously displayed a small photo) -->
+
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 reveal delay-100">
                 Olá, eu sou <br>
                 <span class="gradient-text">Rafael Barros</span>
             </h1>
-            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-400 reveal delay-200">
-                Transformo problemas complexos em interfaces intuitivas e código eficiente.
-                Especialista em <span class="text-slate-200 font-semibold">UI/UX Design</span> e <span class="text-slate-200 font-semibold">Desenvolvimento Full-Stack</span>.
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-300 reveal delay-200">
+                Ajudo empresas e profissionais a vender mais e economizar tempo com sites, landing pages e automações simples — sem jargões técnicos.
+                Trabalho para que você consiga clientes e processos mais eficientes, com comunicação clara e prazos combinados.
             </p>
             <div class="mt-10 flex justify-center gap-4 reveal delay-300">
                 <a href="#portfolio" class="px-8 py-3.5 rounded-full bg-primary text-white font-semibold shadow-lg shadow-primary/25 hover:bg-indigo-500 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300">
@@ -128,14 +171,20 @@
             
             <!-- Tech Stack Icons -->
             <div class="mt-16 pt-8 border-t border-slate-800/50 max-w-4xl mx-auto reveal delay-500">
-                <p class="text-sm text-slate-500 mb-6">Tecnologias que domino</p>
-                <div class="flex flex-wrap justify-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                    <i class="fab fa-figma text-3xl hover:text-pink-500 transition-colors" title="Figma"></i>
-                    <i class="fab fa-react text-3xl hover:text-cyan-400 transition-colors" title="React"></i>
-                    <i class="fab fa-js text-3xl hover:text-yellow-400 transition-colors" title="JavaScript"></i>
-                    <i class="fab fa-node text-3xl hover:text-green-500 transition-colors" title="Node.js"></i>
-                    <i class="fas fa-project-diagram text-3xl hover:text-red-500 transition-colors" title="n8n Automation"></i>
-                    <i class="fas fa-database text-3xl hover:text-orange-400 transition-colors" title="SQL/NoSQL"></i>
+                <p class="text-sm text-slate-400 mb-6">Como eu posso te ajudar</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                    <div class="p-4 bg-card rounded-lg border border-slate-700">
+                        <h4 class="text-white font-semibold">Vender mais online</h4>
+                        <p class="text-slate-400 text-sm">Landing pages e sites focados em conversão para gerar leads e clientes.</p>
+                    </div>
+                    <div class="p-4 bg-card rounded-lg border border-slate-700">
+                        <h4 class="text-white font-semibold">Economizar tempo</h4>
+                        <p class="text-slate-400 text-sm">Automação de tarefas repetitivas para que você foque no que importa.</p>
+                    </div>
+                    <div class="p-4 bg-card rounded-lg border border-slate-700">
+                        <h4 class="text-white font-semibold">Comunicação clara</h4>
+                        <p class="text-slate-400 text-sm">Relatórios simples e linguagem sem termos técnicos — você sempre sabe o que está recebendo.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -206,48 +255,38 @@
     <section id="servicos" class="relative z-10 py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Minhas Especialidades</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Serviços para clientes</h2>
                 <p class="text-slate-400 max-w-2xl mx-auto">
-                    Ofereço um ciclo completo de desenvolvimento de produto digital, do visual à automação de processos.
+                    Entrego soluções práticas para atrair clientes, aumentar vendas e reduzir trabalho manual — tudo explicado de forma simples.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Service 1 -->
                 <div class="bg-card border border-slate-700/50 p-6 rounded-2xl hover:border-primary/50 hover:-translate-y-2 transition-all duration-300 reveal delay-100 group">
                     <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white text-primary transition-colors">
-                        <i class="fas fa-pen-ruler text-xl"></i>
+                        <i class="fas fa-bullhorn text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">UI/UX Design</h3>
-                    <p class="text-slate-400 text-sm">Criação de interfaces modernas, wireframes, protótipos interativos e pesquisa de usuário (Figma/Adobe XD).</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Landing Pages que convertem</h3>
+                    <p class="text-slate-400 text-sm">Página preparada para capturar contatos e transformar visitantes em clientes, com foco em resultados e objetivos claros.</p>
                 </div>
 
                 <!-- Service 2 -->
                 <div class="bg-card border border-slate-700/50 p-6 rounded-2xl hover:border-primary/50 hover:-translate-y-2 transition-all duration-300 reveal delay-200 group">
                     <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-white text-secondary transition-colors">
-                        <i class="fas fa-code text-xl"></i>
+                        <i class="fas fa-cogs text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Full Stack Dev</h3>
-                    <p class="text-slate-400 text-sm">Desenvolvimento de softwares completos utilizando React, Node.js e bancos de dados relacionais/não-relacionais.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Automação de tarefas</h3>
+                    <p class="text-slate-400 text-sm">Automatizo tarefas repetitivas (email, CRM, WhatsApp) para que você ganhe tempo e reduza erros.</p>
                 </div>
 
                 <!-- Service 3 -->
                 <div class="bg-card border border-slate-700/50 p-6 rounded-2xl hover:border-primary/50 hover:-translate-y-2 transition-all duration-300 reveal delay-300 group">
                     <div class="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-pink-500 group-hover:text-white text-pink-500 transition-colors">
-                        <i class="fas fa-rocket text-xl"></i>
+                        <i class="fas fa-handshake text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Landing Pages</h3>
-                    <p class="text-slate-400 text-sm">Páginas de alta conversão, otimizadas para SEO e mobile-first, focadas em vender seu produto ou ideia.</p>
-                </div>
-
-                <!-- Service 4 (Automation Highlighted) -->
-                <div class="bg-gradient-to-br from-card to-slate-800 border border-red-500/30 p-6 rounded-2xl hover:border-red-500 hover:-translate-y-2 transition-all duration-300 reveal delay-400 group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 px-2 py-1 bg-red-500/20 text-red-400 text-[10px] font-bold uppercase tracking-wider rounded-bl-lg">High Value</div>
-                    <div class="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-500 group-hover:text-white text-red-500 transition-colors">
-                        <i class="fas fa-project-diagram text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Automação com n8n</h3>
-                    <p class="text-slate-400 text-sm">Transforme processos manuais em fluxos automáticos inteligentes. Integro seus CRMs, planilhas e IAs para economizar horas de trabalho e escalar sua operação.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Entrega e suporte direto</h3>
+                    <p class="text-slate-400 text-sm">Projeto entregue pronto para usar, com explicação simples e suporte inicial para você entrar no ar sem dor de cabeça.</p>
                 </div>
             </div>
         </div>
@@ -264,60 +303,60 @@
                 <a href="https://github.com/millenialperson1995" target="_blank" class="text-primary font-medium hover:text-white transition-colors mt-4 md:mt-0 hidden md:block">Ver GitHub <i class="fas fa-arrow-right ml-2"></i></a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Project 1 -->
                 <div class="group rounded-2xl bg-card border border-slate-700 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 reveal">
-                    <!-- Placeholder Image - CSS Gradient -->
-                    <div class="h-48 bg-gradient-to-br from-slate-700 to-slate-800 relative overflow-hidden group-hover:scale-105 transition-transform duration-500 flex items-center justify-center">
-                        <i class="fas fa-mobile-alt text-6xl text-slate-600 group-hover:text-primary transition-colors opacity-50"></i>
-                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">Ver Detalhes</span>
+                    <!-- Project image (optimized placeholder) -->
+                    <div class="h-48 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                        <img src="assets/img/project-1.svg" alt="Interface de dashboard financeiro - exemplo" loading="lazy" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                            <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">Ver Detalhes</span>
                         </div>
                     </div>
                     <div class="p-6">
                         <div class="flex gap-2 mb-3">
-                            <span class="px-2 py-1 bg-slate-800 text-xs text-primary rounded border border-primary/20">UI/UX</span>
-                            <span class="px-2 py-1 bg-slate-800 text-xs text-slate-400 rounded border border-slate-700">Mobile App</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs text-primary rounded border border-primary/20">Resultado</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs text-slate-400 rounded border border-slate-700">App Mobile</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Fintech Dashboard Mobile</h3>
-                        <p class="text-slate-400 text-sm mb-4">Redesign completo de um aplicativo financeiro focado em simplificar a visualização de investimentos para o usuário comum.</p>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Dashboard financeiro (exemplo)</h3>
+                        <p class="text-slate-400 text-sm mb-4">Ajudei a tornar fácil para clientes entenderem seus investimentos — resultando em maior retenção e satisfação.</p>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
                 <div class="group rounded-2xl bg-card border border-slate-700 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 reveal delay-100">
-                     <div class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden group-hover:scale-105 transition-transform duration-500 flex items-center justify-center">
-                        <i class="fas fa-laptop-code text-6xl text-slate-600 group-hover:text-secondary transition-colors opacity-50"></i>
-                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="px-4 py-2 bg-secondary text-white rounded-full text-sm font-medium">Ver Detalhes</span>
+                    <div class="h-48 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                        <img src="assets/img/project-2.svg" alt="Plataforma de gestão - screenshot exemplo" loading="lazy" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                            <span class="px-4 py-2 bg-secondary text-white rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">Ver Detalhes</span>
                         </div>
                     </div>
                     <div class="p-6">
                         <div class="flex gap-2 mb-3">
-                            <span class="px-2 py-1 bg-slate-800 text-xs text-secondary rounded border border-secondary/20">Full Stack</span>
-                            <span class="px-2 py-1 bg-slate-800 text-xs text-slate-400 rounded border border-slate-700">React</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs text-secondary rounded border border-secondary/20">Resultado</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs text-slate-400 rounded border border-slate-700">Sistema</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">SaaS de Gestão</h3>
-                        <p class="text-slate-400 text-sm mb-4">Plataforma SaaS para gestão de pequenas empresas, com dashboard interativo, controle de estoque e emissão de relatórios.</p>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">Plataforma de gestão (exemplo)</h3>
+                        <p class="text-slate-400 text-sm mb-4">Sistema pensado para donos de negócio, reduzindo horas gastas em relatórios e ajudando decisões mais rápidas.</p>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
                 <div class="group rounded-2xl bg-card border border-slate-700 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 reveal delay-200">
-                     <div class="h-48 bg-gradient-to-br from-slate-700 to-slate-800 relative overflow-hidden group-hover:scale-105 transition-transform duration-500 flex items-center justify-center">
-                        <i class="fas fa-robot text-6xl text-slate-600 group-hover:text-red-500 transition-colors opacity-50"></i>
-                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="px-4 py-2 bg-red-500 text-white rounded-full text-sm font-medium">Ver Workflow</span>
+                    <div class="h-48 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                        <img src="assets/img/project-3.svg" alt="Automação de captação de leads - exemplo" loading="lazy" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                            <span class="px-4 py-2 bg-red-500 text-white rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">Ver Workflow</span>
                         </div>
                     </div>
                     <div class="p-6">
                         <div class="flex gap-2 mb-3">
-                            <span class="px-2 py-1 bg-slate-800 text-xs text-red-500 rounded border border-red-500/20">n8n</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs text-red-500 rounded border border-red-500/20">Resultado</span>
                             <span class="px-2 py-1 bg-slate-800 text-xs text-slate-400 rounded border border-slate-700">Automação</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-red-500 transition-colors">Automação de Leads</h3>
-                        <p class="text-slate-400 text-sm mb-4">Sistema automatizado que captura leads, qualifica com IA e distribui para vendedores via WhatsApp e CRM instantaneamente.</p>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-red-500 transition-colors">Fluxo de captação (exemplo)</h3>
+                        <p class="text-slate-400 text-sm mb-4">Automatizei o fluxo que captura leads e os organiza para contato, reduzindo o tempo de resposta e aumentando a conversão.</p>
                     </div>
                 </div>
 
@@ -331,24 +370,28 @@
 
     <!-- CTA / Contact Section -->
     <section id="contato" class="relative z-10 py-20">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 border border-white/10 rounded-3xl p-10 md:p-16 reveal">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Tem um projeto ou processo para automatizar?</h2>
-                <p class="text-slate-300 mb-8 text-lg">
-                    Estou sempre aberto a novos desafios. Vamos conversar sobre como design e automação podem escalar seu negócio.
-                </p>
-                
-                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-                    <a href="mailto:contato@rafaelbarros.com" class="flex items-center justify-center w-full md:w-auto px-8 py-4 rounded-full bg-white text-dark font-bold hover:bg-slate-200 transition-colors">
-                        <i class="far fa-envelope mr-2"></i> Enviar E-mail
-                    </a>
-                    <a href="https://www.linkedin.com/in/rafael-nascimento-b7550a140/" target="_blank" class="flex items-center justify-center w-full md:w-auto px-8 py-4 rounded-full bg-transparent border border-white/20 text-white font-medium hover:bg-white/10 transition-colors">
-                        <i class="fab fa-linkedin mr-2"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/millenialperson1995" target="_blank" class="flex items-center justify-center w-full md:w-auto px-8 py-4 rounded-full bg-transparent border border-white/20 text-white font-medium hover:bg-white/10 transition-colors">
-                        <i class="fab fa-github mr-2"></i> GitHub
-                    </a>
-                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Quer atrair mais clientes ou economizar tempo?</h2>
+                <p class="text-slate-300 mb-6 text-lg">Escolha a forma mais rápida para conversarmos — respondo em até 24 horas.</p>
+
+                <form class="max-w-xl mx-auto text-left" action="mailto:contato@rafaelbarros.com" method="post" enctype="text/plain">
+                    <label class="block text-sm text-slate-300 mb-2">Seu nome</label>
+                    <input name="Nome" class="w-full p-3 rounded-md mb-4 bg-slate-800 border border-slate-700 text-white" required>
+
+                    <label class="block text-sm text-slate-300 mb-2">E-mail ou WhatsApp</label>
+                    <input name="Contato" class="w-full p-3 rounded-md mb-4 bg-slate-800 border border-slate-700 text-white" required>
+
+                    <label class="block text-sm text-slate-300 mb-2">O que você precisa? (breve)</label>
+                    <textarea name="Mensagem" rows="4" class="w-full p-3 rounded-md mb-4 bg-slate-800 border border-slate-700 text-white" required></textarea>
+
+                    <div class="flex flex-col md:flex-row gap-3 md:justify-center">
+                        <button type="submit" class="px-6 py-3 rounded-full bg-primary text-white font-semibold">Enviar mensagem</button>
+                        <button data-cal-link="rafael-barros-exv3gg/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view"}' class="px-6 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white inline-flex items-center justify-center">Agendar conversa rápida</button>
+                    </div>
+                </form>
+
+                <p class="text-slate-400 text-sm mt-6">Se preferir, envie diretamente para <a class="text-primary" href="mailto:contato@rafaelbarros.com">contato@rafaelbarros.com</a></p>
             </div>
         </div>
     </section>
@@ -362,6 +405,20 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <!-- Cal element-click embed code begins -->
+        <script type="text/javascript">
+            (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "30min", {origin:"https://app.cal.com"});
+
+        // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
+        // `data-cal-link="rafael-barros-exv3gg/30min"`
+        // data-cal-namespace="30min"
+        // `data-cal-config='{"layout":"month_view"}'`
+
+        Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        </script>
+        <!-- Cal element-click embed code ends -->
 </body>
 </html>
